@@ -1,0 +1,401 @@
+
+/*
+====================================================
+* [Master Stylesheet]
+
+  Template Name : Aka-Portfolio 
+  Version    :  1.0 
+  Author     :  Ashikur Rahman
+  Author URI :  http://ashikur-rahman.github.io/
+====================================================
+
+   TOC:
+  =======
+  0. Webfonts and Icon fonts Import
+
+  1. Primary Styles
+
+  2.  NAVIGATION STYLES
+    a. NAV TOGGLE STYLES
+
+  3. Per load
+
+  4. Profile Section
+      a. Services Styles
+
+  5. Resume Section
+      a. Skills Styles
+      b. Recognition Styles
+
+  6. Portfolio Section
+      a. Testimonials Styles
+
+  7. Contact Section
+      a. Social and Map Styles
+
+===================================================== */
+
+/* --------------------------------- */
+/* 0. Webfonts and Icon fonts
+ ----------------------------------- */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,900,600,700,800,500");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:400italic,400");
+
+/* -------------------------------- 
+1. Primary style
+-------------------------------- */
+body {
+ 
+  font-size:1.6rem;
+  font-family: 'Raleway', sans-serif;
+  /* background:#101524;
+  color:#fff*/
+}
+
+.headings{
+		padding-top: 40px;
+		text-align: center;
+	}
+
+.fa {
+	font-size: 2.8em;
+}
+
+@media screen and (max-width: 480px) {
+    .fa {
+	font-size: 1.8em;
+  }
+}
+
+@media screen (max-width: 580px) and (min-width: 481px;) {
+    .fa {
+	font-size: 2em;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+a:hover{
+	color: #d1d1d1; 
+}
+
+.slogan{
+	text-align: center;	
+	font-family:"Merriweather",serif;
+    font-style:italic;
+}
+
+.gap{
+
+	min-height: 80px;
+}
+h1,h2,h3,h4,h5,h6 {
+ /* font-family:"Raleway",sans-serif;*/
+  font-weight: 600;
+}
+
+h1 {
+  font-size:2em;
+  margin:.67em 0
+}
+
+h2 {
+  font-size:1.5em;
+  margin:.75em 0
+}
+
+h3 {
+  font-size:1.17em;
+  margin:.83em 0
+}
+
+h5 {
+  font-size:.83em;
+  margin:1.5em 0
+}
+
+h6 {
+  font-size:.75em;
+  margin:1.67em 0
+}
+
+
+
+   #background-picture { 
+    background-image: url('../img/picture.png');
+    min-height:388px;
+    background-repeat: no-repeat;
+    background-size: cover | contain;
+    
+   }
+
+   #developer-section{   
+	background-color: rgba(51,102,153,.9);
+    font-family:"Merriweather",serif;
+    color: #fff;
+    width: 274px;
+    margin-right: -14px;
+    float: right;
+      padding-top: 60px;
+    height: 388px;
+    text-align: center;
+  
+	}
+
+	#designer-section{   
+	background-color: rgba(204,40,40,.9); 
+   font-family:"Merriweather",serif;
+   	color: #fff;
+   	width: 294px;
+    padding-top: 160px;
+    margin-left: -14px;
+    height: 388px;
+    text-align: center;
+  
+	}
+
+	#contact{
+		/*background-color: #336699;*/
+		background-color: #13557F;
+		min-height: 300px;
+		color: #fff;
+		
+	}
+
+
+.hire-me.btn, .download-resume.btn {
+  background: none repeat scroll 0 0 #0F6499;
+
+  border-color: #0F6499;
+  border-radius: 0;
+  color: #ffffff;
+  font-size: 13px;
+  margin: 15px auto 5px;
+  padding: 15px 50px;
+  text-transform: uppercase;
+   -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.hire-me.btn:hover,.download-resume.btn:hover {
+  background:#FFFFFF;
+  text-transform: uppercase;
+  color:#50626C;
+  border-color:#0F6499;
+}
+
+.about-me .bio .buttons {
+    margin: 30px auto;
+}
+
+
+.center-text{
+	text-align: center;
+}
+
+
+
+.hide{
+	display:none;
+}
+
+.show{
+	display: block;
+}
+
+
+
+.page-close {
+  position:fixed;
+  top:30px;
+  right:5%;
+  background:url("../img/icons/icon-close-mobile.svg") no-repeat center center;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0)
+}
+/* ------------------------------------------
+  2. NAVIGATION STYLES
+  (+ responsive-nav.css file is loaded in the <head>)
+--------------------------------------------- */
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-collapse,
+.nav-collapse * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nav-collapse,
+.nav-collapse ul {
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+
+.nav-collapse li {
+  float: left;
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .nav-collapse li {
+    width: 25%;
+    *width: 24.9%; /* IE7 Hack */
+    _width: 19%; /* IE6 Hack */
+  }
+}
+
+.nav-collapse a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%; 
+  background: #CC2828;
+ /* background: #f4421a;*/
+  border-bottom: 1px solid white;
+  padding: 0.7em 1em;
+  float: left;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.nav-collapse a:hover {
+
+	 background-color: #FF4B4B;
+	/* background: url("../img/icons/down.png") no-repeat center center;*/
+    background-repeat: no-repeat;
+	background-size: 30px 20px;
+    
+    
+}
+@media screen and (min-width: 40em) {
+  .nav-collapse a {
+    margin: 0;
+    padding: 1em;
+    float: left;
+    text-align: center;
+    border-bottom: 0;
+    border-right: 1px solid white;
+  }
+}
+
+.nav-collapse ul ul a {
+  background: #ca3716;
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 40em) {
+  .nav-collapse ul ul a {
+    display: none;
+  }
+}
+
+
+/* ------------------------------------------
+  2.a. NAV TOGGLE STYLES
+--------------------------------------------- */
+
+@font-face {
+  font-family: "responsivenav";
+  src:url("../icons/responsivenav.eot");
+  src:url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../icons/responsivenav.ttf") format("truetype"),
+    url("../icons/responsivenav.woff") format("woff"),
+    url("../icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav-toggle {
+  position: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 55px;
+  float: right;
+}
+
+.nav-toggle:before {
+  color: #CC2828; /* Edit this to change the icon color */
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0;
+  text-align: center;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-toggle.active::before {
+  font-size: 24px;
+  content:"x";
+}
+/* ------------------------------------------- */
+/* 3. Preloader CSS */ 
+/* ------------------------------------------- */
+
+#preloader{
+  background-color:#d1d1d1; 
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:9999;  
+}
+
+.loader {
+  background: url("../img/svg-loaders/puff.svg") no-repeat scroll center center rgba(0, 0, 0, 0);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
